@@ -1,0 +1,14 @@
+AI-Ready EDA Summary
+
+- Dataset: creditcard.csv
+- Rows: 284807
+- Columns: 31
+- Fraud cases: 492
+- Fraud ratio: 0.001727
+- Duplicate rows: 1081
+- Numeric columns: 31
+- Categorical columns: 0
+- Key interpretable variables: Time, Amount, Class
+- Anonymized variables: V1-V28
+- Modeling implication: severe imbalance requires threshold-aware evaluation and likely class-sensitive training strategies
+- Research implication: findings should be framed as proxy evidence for digital waqf fraud detection, not direct operational validation

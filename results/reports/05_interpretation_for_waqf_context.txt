@@ -1,0 +1,24 @@
+Stage: Interpretation for Waqf Context
+
+Trust implications:
+1. A digital waqf platform needs strong fraud capture without over-penalizing legitimate donors or administrators.
+2. XGBoost offers the most credible trust-preserving balance in this study because it captures 77 fraudulent cases while keeping false positives limited to 6.
+3. Random Forest is valuable where governance policy prioritizes minimizing unnecessary donor friction, since it produced only 1 false positives.
+
+Transparency implications:
+1. Tree-based models provide an auditable basis for monitoring suspicious transaction behavior through feature importance ranking.
+2. Both Random Forest and XGBoost identified similar leading signals, especially V14, V10, V12, and V4, which strengthens confidence that the supervised models are learning stable discriminatory patterns in the proxy dataset.
+3. In an actual waqf deployment, analogous interpretable features could include abnormal donation amount, transaction timing irregularity, repeated small transfers, donor account volatility, or device inconsistency.
+
+Governance implications:
+1. If the operational objective is early fraud interception with acceptable review effort, XGBoost is the best candidate for first-line automated scoring.
+2. If the objective is stricter protection against false accusations, Random Forest can serve as a complementary or secondary confirmation model.
+3. Autoencoder is better positioned as an anomaly watchlist mechanism for emerging patterns that are not yet represented in labeled historical data.
+
+Recommended research narrative:
+1. Supervised learning is more effective when labeled fraud-like proxy data exists.
+2. Unsupervised anomaly detection via Isolation Forest and Autoencoder remains strategically useful for identifying novel or evolving suspicious behaviors in digital waqf ecosystems.
+3. A layered monitoring design for digital waqf could combine a high-performing supervised model for primary screening and an anomaly model for secondary exploratory surveillance.
+
+Waqf-context caution:
+The current results should not be interpreted as direct operational performance for waqf transactions. They instead demonstrate how machine learning methods can support trust, transparency, and governance design in the absence of a public waqf fraud dataset.

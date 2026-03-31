@@ -1,0 +1,6 @@
+Stage: Research Questions
+
+RQ1. Which machine learning approaches are most effective for detecting rare fraudulent transactions in a proxy dataset for digital waqf platforms?
+RQ2. How should performance be interpreted when class imbalance is extreme and precision-recall trade-offs matter more than raw accuracy?
+RQ3. What practical governance insights can be derived from fraud detection outcomes for digital waqf trust and transparency?
+RQ4. What are the methodological limits of transferring results from generic financial fraud data to waqf transaction scenarios?

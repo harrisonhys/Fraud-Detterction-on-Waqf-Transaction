@@ -1,0 +1,9 @@
+metric,value
+row_count,284807.0
+column_count,31.0
+numeric_feature_count,31.0
+categorical_feature_count,0.0
+fraud_count,492.0
+non_fraud_count,284315.0
+fraud_ratio,0.001727485630620034
+duplicate_rows,1081.0

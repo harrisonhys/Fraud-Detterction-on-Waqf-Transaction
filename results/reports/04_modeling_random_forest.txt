@@ -1,0 +1,37 @@
+Stage: Modeling
+    Model: Random Forest
+
+    Training summary:
+    - Training time (seconds): 37.19
+    - Threshold: 0.527000
+    - Threshold logic: Precision-priority calibration: selected threshold maximizing F0.5 under recall >= 0.30.
+
+    Parameters:
+    {'bootstrap': True, 'ccp_alpha': 0.0, 'class_weight': {0: 0.5008340614822464, 1: 300.23809523809524}, 'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 300, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+
+    Evaluation metrics:
+    - Precision: 0.985507
+    - Recall: 0.715789
+    - F1-score: 0.829268
+    - ROC-AUC: 0.949074
+    - PR-AUC: 0.807194
+    - TN: 56650
+    - FP: 1
+    - FN: 27
+    - TP: 68
+
+    Feature importance snapshot:
+    feature  importance
+V14    0.163112
+V10    0.127691
+V12    0.110482
+ V4    0.106915
+V17    0.087180
+V11    0.061449
+V16    0.057585
+ V3    0.051135
+ V2    0.026464
+ V7    0.025614
+
+    Notes:
+    Class-balanced weighting was taken from Stage 3 outputs and applied directly to the classifier.

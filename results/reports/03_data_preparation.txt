@@ -1,0 +1,31 @@
+Stage: Data Preparation
+
+Source dataset rows: 284807
+Rows after duplicate removal: 283726
+Removed duplicate rows: 1081
+Validation split ratio: 0.20
+Random state: 42
+Missingness threshold for feature removal: 0.95
+
+Transformation steps:
+1. Removed exact duplicate rows to reduce repeated patterns that could bias evaluation.
+2. Preserved all non-target columns because no feature exceeded the missingness threshold.
+3. Applied a stratified train-validation split using the `Class` target.
+4. Built a supervised preprocessing pipeline with median imputation and robust scaling for numeric features.
+5. Built an unsupervised preprocessing pipeline with the same transformations but fit only on normal training transactions.
+6. Computed class weights for future supervised modeling instead of oversampling at the preparation stage.
+
+Leakage handling:
+1. `Class` is treated strictly as the target and excluded from all feature matrices.
+2. No obvious post-event leakage fields were found in the available proxy dataset.
+
+Split summary:
+- Training rows: 226980
+- Validation rows: 56746
+- Training fraud ratio: 0.001665
+- Validation fraud ratio: 0.001674
+
+Preparation decision notes:
+1. No categorical encoding was required for the current dataset because all predictors are numeric.
+2. No imputation was triggered in practice because missing values are absent, but imputation remains part of the reusable pipeline.
+3. Robust scaling was chosen to reduce sensitivity to skew and outliers, especially for `Amount` and `Time`.

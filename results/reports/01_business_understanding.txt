@@ -1,0 +1,27 @@
+Stage: Business Understanding
+
+Research problem statement:
+Digital waqf platforms improve accessibility, transparency, and operational efficiency, but they also increase exposure to fraudulent transaction behavior that can erode stakeholder trust.
+
+Research objectives:
+1. Build a reproducible machine learning workflow for fraud detection in a digital waqf proxy setting.
+2. Assess how well fraud detection methods identify suspicious transactions under severe class imbalance.
+3. Translate model findings into governance, trust, and transparency implications for digital waqf platforms.
+
+Fraud risk assumptions in digital waqf platforms:
+1. Suspicious behavior may involve unusual donation sizes, timing anomalies, repeated micro-transactions, or identity/device inconsistencies.
+2. Fraud is rare relative to legitimate traffic, so class imbalance is expected to be extreme.
+3. False negatives threaten trust and governance, while false positives may disrupt legitimate donors or administrators.
+
+Proxy dataset rationale:
+The available dataset is a public credit card fraud dataset rather than a waqf-native transaction dataset. It is still useful as a proxy because it captures highly imbalanced binary fraud detection behavior and allows evaluation of supervised and anomaly-based methods under realistic rarity conditions.
+
+Success criteria:
+1. Produce saved, machine-readable research artifacts for every stage.
+2. Compare at least one supervised path and one anomaly-detection path.
+3. Keep the workflow reproducible and ready for extension to richer transaction data.
+
+Limitations and threats to validity:
+1. The proxy dataset does not represent actual waqf transaction semantics.
+2. Features are anonymized, so domain interpretation is limited.
+3. Conclusions about digital waqf should be framed as method-transfer insights, not direct operational evidence.

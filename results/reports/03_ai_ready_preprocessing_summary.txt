@@ -1,0 +1,18 @@
+AI-Ready Preprocessing Summary
+
+- Original rows: 284807
+- Rows after deduplication: 283726
+- Duplicate rows removed: 1081
+- Input features retained: 30
+- Output features after preprocessing: 30
+- Numeric input features: 30
+- Categorical input features: 0
+- Train rows: 226980
+- Validation rows: 56746
+- Train fraud ratio: 0.001665
+- Validation fraud ratio: 0.001674
+- Supervised preprocessing: median imputation + robust scaling
+- Unsupervised preprocessing: fit on normal-only training transactions with the same transform family
+- Class weighting strategy: sklearn balanced class weights computed on the training split
+- Oversampling applied: no
+- Leakage control: target excluded from features; no additional leakage variables detected

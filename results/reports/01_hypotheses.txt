@@ -1,0 +1,6 @@
+Stage: Hypotheses
+
+H1. Supervised ensemble models will outperform simpler anomaly detection baselines on standard fraud classification metrics when labeled proxy data is available.
+H2. Metrics suited to imbalanced learning, especially recall, F1-score, ROC-AUC, and PR-oriented interpretation, will be more informative than accuracy.
+H3. Even when supervised models achieve stronger overall performance, anomaly-based methods remain useful for surfacing novel suspicious patterns in future waqf transaction monitoring.
+H4. The proxy-data setting can support method selection and evaluation design, but cannot eliminate external-validity risk for deployment in real waqf systems.

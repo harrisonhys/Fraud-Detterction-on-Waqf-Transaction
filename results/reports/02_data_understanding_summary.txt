@@ -1,0 +1,24 @@
+Stage: Data Understanding Summary
+
+     The available proxy dataset contains 284807 records and 31 columns.
+     Fraud prevalence is 0.001727, confirming an extreme class imbalance setting.
+     Duplicate rows detected: 1081.
+     Missing value profile indicates whether imputation is needed before modeling.
+
+     Top missing-value summary:
+     feature  missing_count  missing_ratio
+Time              0            0.0
+  V1              0            0.0
+  V2              0            0.0
+  V3              0            0.0
+  V4              0            0.0
+  V5              0            0.0
+  V6              0            0.0
+  V7              0            0.0
+  V8              0            0.0
+  V9              0            0.0
+
+     Interpretation:
+     1. This dataset is structurally suitable for fraud detection benchmarking.
+     2. Extreme rarity makes precision, recall, F1-score, ROC-AUC, and PR-focused analysis more meaningful than accuracy.
+     3. Because most features are anonymized, domain-level interpretation for waqf use cases should focus on method behavior rather than direct semantic mapping.

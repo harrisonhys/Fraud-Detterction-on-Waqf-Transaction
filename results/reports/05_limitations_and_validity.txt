@@ -1,0 +1,21 @@
+Stage: Limitations and Validity
+
+Proxy-data limitations:
+1. The experiment uses a credit card fraud dataset rather than actual waqf transaction records.
+2. Most predictor variables are anonymized, limiting semantic mapping from model behavior to specific waqf operational processes.
+3. The fraud generation process in card payments may differ materially from misconduct patterns in waqf donation, management, or disbursement workflows.
+
+Internal validity considerations:
+1. The pipeline is reproducible, uses a fixed random seed, and relies on a stratified validation split.
+2. Duplicate rows were removed before modeling to reduce evaluation bias.
+3. The strongest model in this setting was XGBoost, but its reported advantage is conditional on the current split, threshold, and feature representation.
+
+External validity considerations:
+1. Real digital waqf systems may include metadata unavailable in this dataset, such as donor identity, beneficiary category, institution role, channel, geography, and device traces.
+2. Base fraud rates in waqf ecosystems may be lower or structurally different from those in card transactions.
+3. Model transfer to real waqf environments would require domain adaptation, threshold recalibration, governance review, and human-in-the-loop validation.
+
+Practical validity guidance:
+1. The present study supports method comparison, evaluation design, and governance framing.
+2. It does not justify direct production deployment in waqf platforms without real-domain validation.
+3. Future work should collect or simulate waqf-specific transaction data, include richer contextual variables, and evaluate concept drift over time.

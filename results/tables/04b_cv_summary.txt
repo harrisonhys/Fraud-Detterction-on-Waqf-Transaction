@@ -1,0 +1,41 @@
+Repeated Stratified K-Fold Validation Results
+============================================================
+Configuration: 5 folds × 3 seeds = 15 total runs per model
+Random seeds: [42, 123, 456]
+
+Mean Performance Across All Folds:
+------------------------------------------------------------
+
+Random Forest:
+  Precision: 0.950230 ± 0.021900
+  Recall:    0.744912 ± 0.060517
+  F1-Score:  0.834087 ± 0.043353
+  ROC-AUC:   0.958067 ± 0.015217
+  PR-AUC:    0.838988 ± 0.044307
+
+XGBoost:
+  Precision: 0.867619 ± 0.030032
+  Recall:    0.829436 ± 0.045501
+  F1-Score:  0.846980 ± 0.022275
+  ROC-AUC:   0.980059 ± 0.011045
+  PR-AUC:    0.849230 ± 0.044323
+
+Isolation Forest:
+  Precision: 0.091564 ± 0.009955
+  Recall:    0.572953 ± 0.058125
+  F1-Score:  0.157854 ± 0.016820
+  ROC-AUC:   0.948474 ± 0.018327
+  PR-AUC:    0.116321 ± 0.029270
+
+Autoencoder:
+  Precision: 0.160170 ± 0.032255
+  Recall:    0.746861 ± 0.068926
+  F1-Score:  0.262908 ± 0.047254
+  ROC-AUC:   0.936545 ± 0.020096
+  PR-AUC:    0.468479 ± 0.123071
+
+Notes:
+- Each fold is stratified to maintain fraud/normal ratio.
+- Multiple seeds provide variance estimates (std) across different data splits.
+- This enables statistical significance testing for model comparisons.
+- Predictions stored in 04b_cv_predictions.csv for McNemar's test.

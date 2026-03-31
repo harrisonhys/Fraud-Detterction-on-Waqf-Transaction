@@ -1,0 +1,13 @@
+Stage: Data Understanding
+
+Dataset file: creditcard.csv
+Rows: 284807
+Columns: 31
+Numeric features: 31
+Categorical features: 0
+
+Feature notes:
+1. `Class` is the binary target.
+2. `Time` is a transaction order or elapsed-time proxy.
+3. `Amount` is the only directly interpretable transaction magnitude field.
+4. `V1` to `V28` are anonymized transformed predictors.

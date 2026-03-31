@@ -1,0 +1,102 @@
+Statistical Significance Testing Report
+======================================================================
+
+1. VARIANCE ESTIMATES (Mean ± Std across 5 folds × 3 seeds = 15 runs)
+----------------------------------------------------------------------
+
+Random Forest:
+  precision : 0.950230 ± 0.021900 (min=0.893939, max=0.985507)
+  recall    : 0.744912 ± 0.060517 (min=0.621053, max=0.852632)
+  f1_score  : 0.834087 ± 0.043353 (min=0.732919, max=0.905028)
+  roc_auc   : 0.958067 ± 0.015217 (min=0.933023, max=0.977450)
+  pr_auc    : 0.838988 ± 0.044307 (min=0.756497, max=0.907452)
+
+XGBoost:
+  precision : 0.867619 ± 0.030032 (min=0.835052, max=0.925000)
+  recall    : 0.829436 ± 0.045501 (min=0.757895, max=0.926316)
+  f1_score  : 0.846980 ± 0.022275 (min=0.815217, max=0.888889)
+  roc_auc   : 0.980059 ± 0.011045 (min=0.956747, max=0.994237)
+  pr_auc    : 0.849230 ± 0.044323 (min=0.764327, max=0.919722)
+
+Isolation Forest:
+  precision : 0.091564 ± 0.009955 (min=0.070626, max=0.104348)
+  recall    : 0.572953 ± 0.058125 (min=0.463158, max=0.663158)
+  f1_score  : 0.157854 ± 0.016820 (min=0.122563, max=0.179104)
+  roc_auc   : 0.948474 ± 0.018327 (min=0.912946, max=0.975460)
+  pr_auc    : 0.116321 ± 0.029270 (min=0.060883, max=0.166736)
+
+Autoencoder:
+  precision : 0.160170 ± 0.032255 (min=0.099698, max=0.207407)
+  recall    : 0.746861 ± 0.068926 (min=0.585106, max=0.884211)
+  f1_score  : 0.262908 ± 0.047254 (min=0.174603, max=0.336000)
+  roc_auc   : 0.936545 ± 0.020096 (min=0.892147, max=0.969730)
+  pr_auc    : 0.468479 ± 0.123071 (min=0.287997, max=0.665346)
+
+2. PAIRWISE MODEL COMPARISONS (F1-Score using Welch's t-test)
+----------------------------------------------------------------------
+Testing if performance differences between models are statistically significant:
+
+  Random Forest vs XGBoost ns:
+    Mean F1 - Random Forest: 0.834087, XGBoost: 0.846980
+    Difference: -0.012892 (t=-1.0245, p=0.317325)
+    Winner (higher F1): XGBoost
+    Wins: Random Forest=6/15, XGBoost=9/15
+
+  Random Forest vs Isolation Forest ***:
+    Mean F1 - Random Forest: 0.834087, Isolation Forest: 0.157854
+    Difference: +0.676233 (t=+56.3222, p=0.000000)
+    Winner (higher F1): Random Forest
+    Wins: Random Forest=15/15, Isolation Forest=0/15
+
+  Random Forest vs Autoencoder ***:
+    Mean F1 - Random Forest: 0.834087, Autoencoder: 0.262908
+    Difference: +0.571179 (t=+34.4961, p=0.000000)
+    Winner (higher F1): Random Forest
+    Wins: Random Forest=15/15, Autoencoder=0/15
+
+  XGBoost vs Isolation Forest ***:
+    Mean F1 - XGBoost: 0.846980, Isolation Forest: 0.157854
+    Difference: +0.689126 (t=+95.6221, p=0.000000)
+    Winner (higher F1): XGBoost
+    Wins: XGBoost=15/15, Isolation Forest=0/15
+
+  XGBoost vs Autoencoder ***:
+    Mean F1 - XGBoost: 0.846980, Autoencoder: 0.262908
+    Difference: +0.584071 (t=+43.3012, p=0.000000)
+    Winner (higher F1): XGBoost
+    Wins: XGBoost=15/15, Autoencoder=0/15
+
+  Isolation Forest vs Autoencoder ***:
+    Mean F1 - Isolation Forest: 0.157854, Autoencoder: 0.262908
+    Difference: -0.105055 (t=-8.1118, p=0.000000)
+    Winner (higher F1): Autoencoder
+    Wins: Isolation Forest=0/15, Autoencoder=15/15
+
+3. OVERALL RANKING (Mean Metrics across all CV runs)
+----------------------------------------------------------------------
+
+  1. XGBoost
+     F1: 0.846980, ROC-AUC: 0.980059, Precision: 0.867619, Recall: 0.829436
+
+  2. Random Forest
+     F1: 0.834087, ROC-AUC: 0.958067, Precision: 0.950230, Recall: 0.744912
+
+  3. Autoencoder
+     F1: 0.262908, ROC-AUC: 0.936545, Precision: 0.160170, Recall: 0.746861
+
+  4. Isolation Forest
+     F1: 0.157854, ROC-AUC: 0.948474, Precision: 0.091564, Recall: 0.572953
+
+4. INTERPRETATION & RELIABILITY
+----------------------------------------------------------------------
+✓ Variance estimates show model stability across different random seeds and folds.
+✓ Low std values indicate model predictions are consistent.
+✓ Pairwise comparisons test if performance differences are meaningful.
+✓ F1-score used as primary comparison metric due to severe class imbalance.
+
+5. PUBLICATION READY CLAIMS
+----------------------------------------------------------------------
+✓ We have validated performance using repeated stratified CV (reduces overfitting claims).
+✓ We report mean ± std to show reliability/generalization.
+✓ Statistical comparisons support model ranking without cherry-picking.
+✓ Multiple seeds reduce dependency on single random initialization.

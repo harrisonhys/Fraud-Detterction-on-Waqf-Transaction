@@ -1,0 +1,13 @@
+Stage: Feature Selection
+
+Total input features considered: 30
+Selected input features: 30
+Output feature count after preprocessing: 30
+
+Feature retention rationale:
+1. All available non-target columns were retained because none exceeded the missingness threshold.
+2. The current dataset contains anonymized principal-component-like features plus `Time` and `Amount`.
+3. Because semantic feature meaning is limited, no manual domain-based feature elimination was applied at this stage.
+
+Features retained:
+Time, V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12, V13, V14, V15, V16, V17, V18, V19, V20, V21, V22, V23, V24, V25, V26, V27, V28, Amount

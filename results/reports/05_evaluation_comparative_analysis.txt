@@ -1,0 +1,19 @@
+Stage: Evaluation Comparative Analysis
+
+Comparative summary:
+1. XGBoost ranked first overall based on the weighted evaluation score, supported by the highest F1-score and the highest PR-AUC.
+2. Random Forest ranked second and achieved the strongest raw precision, indicating especially tight control of false positives.
+3. Isolation Forest ranked last because, although its ROC-AUC remained reasonably high, its precision and PR-AUC were not competitive in the extreme-imbalance setting.
+
+Metric-level interpretation:
+1. XGBoost achieved the strongest balance of precision (0.927711) and recall (0.810526), resulting in the best F1-score (0.865169).
+2. Random Forest delivered the lowest false positive burden with only 1 false positives, but it missed more frauds than XGBoost.
+3. Among unsupervised models, Autoencoder provided the strongest fraud-capture trade-off, but unsupervised precision remained substantially lower than supervised alternatives.
+
+False positive versus false negative trade-off:
+1. Random Forest is conservative: very few legitimate transactions are flagged, but more fraud cases remain undetected.
+2. XGBoost is more balanced: it accepts a small increase in false positives to capture more fraud cases.
+3. Isolation Forest and Autoencoder are suitable mainly for exploratory anomaly surfacing and drift monitoring rather than primary high-precision intervention.
+
+Evaluation conclusion:
+In this proxy-dataset experiment, supervised learning clearly outperforms unsupervised anomaly detection for transaction-level fraud classification. XGBoost is the strongest candidate for the primary model in the research narrative, while Random Forest is a credible precision-oriented benchmark and Autoencoder with Isolation Forest remain secondary anomaly-monitoring tools.

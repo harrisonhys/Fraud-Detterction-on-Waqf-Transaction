@@ -1,0 +1,9 @@
+Transformation Log
+
+kept_features=30
+removed_duplicates=1081
+missingness_threshold=0.95
+validation_size=0.20
+random_state=42
+class_weights=[{'class_label': 0, 'class_weight': 0.5008340614822464}, {'class_label': 1, 'class_weight': 300.23809523809524}]
+processed_outputs_saved=yes
