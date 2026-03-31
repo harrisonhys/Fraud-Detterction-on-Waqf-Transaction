@@ -75,7 +75,7 @@ After establishing the data profile, visual diagnostics are presented to show im
 
 Class imbalance visualization:
 
-![Class distribution](../plots/02_class_distribution.png)
+![Class distribution](results/plots/02_class_distribution.png)
 
 Figure 1. Class distribution in the proxy dataset.
 
@@ -83,7 +83,7 @@ Explanation: Figure 1 confirms severe imbalance between legitimate and fraudulen
 
 Amount behavior by class:
 
-![Amount by class](../plots/02_amount_by_class_boxplot.png)
+![Amount by class](results/plots/02_amount_by_class_boxplot.png)
 
 Figure 2. Transaction amount distribution by class.
 
@@ -91,7 +91,7 @@ Explanation: Figure 2 indicates overlap between fraud and non-fraud amount range
 
 Selected feature correlation map:
 
-![Correlation heatmap](../plots/02_correlation_heatmap_selected.png)
+![Correlation heatmap](results/plots/02_correlation_heatmap_selected.png)
 
 Figure 3. Correlation heatmap for selected features with per-cell coefficients.
 
@@ -120,9 +120,9 @@ Thresholds were explicitly calibrated rather than fixed at default values. Rando
 
 Calibration visualizations:
 
-![Random Forest threshold calibration](../plots/04_random_forest_threshold_calibration.png)
+![Random Forest threshold calibration](results/plots/04_random_forest_threshold_calibration.png)
 
-![XGBoost threshold calibration](../plots/04_xgboost_threshold_calibration.png)
+![XGBoost threshold calibration](results/plots/04_xgboost_threshold_calibration.png)
 
 After completing calibration, the subsequent section reports performance outcomes in increasing depth: holdout metrics, error structure, curve behavior, robustness, and statistical significance.
 
@@ -145,7 +145,7 @@ Table 1 summarizes model performance on the calibrated holdout set. The key oper
 
 Main comparative plot:
 
-![Stage 4 model metric comparison](../plots/04_model_metric_comparison.png)
+![Stage 4 model metric comparison](results/plots/04_model_metric_comparison.png)
 
 Figure 4. Multi-metric comparison across all models.
 
@@ -153,7 +153,7 @@ Explanation: Figure 4 visually confirms that supervised models dominate unsuperv
 
 Final ranking plot:
 
-![Final model comparison](../plots/05_model_comparison.png)
+![Final model comparison](results/plots/05_model_comparison.png)
 
 Figure 5. Final ranking-oriented model comparison.
 
@@ -167,7 +167,7 @@ The confusion matrices are presented to make decision consequences explicit for 
 
 Random Forest confusion matrix:
 
-![Random Forest confusion matrix](../plots/04_random_forest_confusion_matrix.png)
+![Random Forest confusion matrix](results/plots/04_random_forest_confusion_matrix.png)
 
 Figure 6. Random Forest confusion matrix.
 
@@ -175,7 +175,7 @@ Explanation: Random Forest yields very low false positives (FP = 1), which is de
 
 XGBoost confusion matrix:
 
-![XGBoost confusion matrix](../plots/04_xgboost_confusion_matrix.png)
+![XGBoost confusion matrix](results/plots/04_xgboost_confusion_matrix.png)
 
 Figure 7. XGBoost confusion matrix.
 
@@ -183,13 +183,13 @@ Explanation: XGBoost captures more fraud cases (TP = 77) than Random Forest whil
 
 Isolation Forest confusion matrix:
 
-![Isolation Forest confusion matrix](../plots/04_isolation_forest_confusion_matrix.png)
+![Isolation Forest confusion matrix](results/plots/04_isolation_forest_confusion_matrix.png)
 
 Figure 8. Isolation Forest confusion matrix.
 
 Autoencoder confusion matrix:
 
-![Autoencoder confusion matrix](../plots/04_autoencoder_confusion_matrix.png)
+![Autoencoder confusion matrix](results/plots/04_autoencoder_confusion_matrix.png)
 
 Figure 9. Autoencoder confusion matrix.
 
@@ -201,13 +201,13 @@ While confusion matrices show one operating point, curve-based analysis is requi
 
 ROC and PR curves are included to avoid over-reliance on a single metric and to show ranking consistency across threshold behavior.
 
-![Random Forest ROC](../plots/04_random_forest_roc_curve.png)
+![Random Forest ROC](results/plots/04_random_forest_roc_curve.png)
 
-![XGBoost ROC](../plots/04_xgboost_roc_curve.png)
+![XGBoost ROC](results/plots/04_xgboost_roc_curve.png)
 
-![Random Forest PR](../plots/04_random_forest_pr_curve.png)
+![Random Forest PR](results/plots/04_random_forest_pr_curve.png)
 
-![XGBoost PR](../plots/04_xgboost_pr_curve.png)
+![XGBoost PR](results/plots/04_xgboost_pr_curve.png)
 
 Figure 10. ROC and PR curves for the two supervised models.
 
@@ -362,7 +362,7 @@ To support independent verification, the next section lists direct links to the 
 ---
 
 ## 9. Reproducibility Assets
-Readers can inspect the full artifact set through [results/tables/04_model_metrics.csv](../tables/04_model_metrics.csv), [results/tables/05_final_model_comparison.csv](../tables/05_final_model_comparison.csv), [results/tables/04b_cv_statistics.csv](../tables/04b_cv_statistics.csv), [results/tables/05b_pairwise_comparison.csv](../tables/05b_pairwise_comparison.csv), and [results/reports/05b_statistical_testing_report.txt](05b_statistical_testing_report.txt).
+Readers can inspect the full artifact set through [results/tables/04_model_metrics.csv](results/tables/04_model_metrics.csv), [results/tables/05_final_model_comparison.csv](results/tables/05_final_model_comparison.csv), [results/tables/04b_cv_statistics.csv](results/tables/04b_cv_statistics.csv), [results/tables/05b_pairwise_comparison.csv](results/tables/05b_pairwise_comparison.csv), and [results/reports/05b_statistical_testing_report.txt](05b_statistical_testing_report.txt).
 
 Finally, explicit drafting assumptions are stated to separate confirmed evidence from non-included publication components.
 
